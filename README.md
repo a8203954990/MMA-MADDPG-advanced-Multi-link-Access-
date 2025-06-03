@@ -1,5 +1,6 @@
 # MMA-MADDPG-advanced-Multi-link-Access
-Throughput-Optimal Multi-Link Access for Wi-Fi 7 via Multi-Agent Reinforcement Learning
+[Throughput-Optimal Multi-Link Access for Wi-Fi 7 via Multi-Agent Reinforcement Learning](https://ieeexplore.ieee.org/document/10978161)
+
 Our paper has been accepted by 2025 IEEE Wireless Communications and Networking Conference (WCNC)
 
 Thanks for your interest in our paper. This project implements a Multi-Agent Deep Deterministic Policy Gradient (MADDPG) solution to optimize throughput in multi-link Wi-Fi networks. The system learns access strategies that maximize channel utilization while minimizing collisions.
