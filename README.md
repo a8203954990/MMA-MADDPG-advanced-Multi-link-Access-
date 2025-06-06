@@ -43,23 +43,31 @@ Repository Structure
 └── README.md           # This document
 
 Key Components
+
 Core Scripts
 
 env_singlelink.py:
 
-
 Virtual Environment in Reinforcement Learning
+
 A simulated channel environment that abstracts real-world wireless communication conditions. It models channel behaviors including packet collisions and successful transmissions.
 
 MADDPG_SingleLink.py:
 
 Training Script
+
 Implements the end-to-end MADDPG training pipeline exclusively in a single-link environment. Generates:
+
 Training reward logs (rewards/ directory)
+
 Optimized Actor network model (PyTorch .pt format in model/ directory)
+
 Training process:
+
 Learns collision-avoidance transmission policies
+
 Maximizes channel utilization through RL
+
 Outputs portable network models for deployment
 
 evaluate.py:
@@ -69,53 +77,28 @@ Loads a pre-trained Actor network model (single-link environment) and interacts 
 plot_reward.py:
 
 Visualization:
+
 Converts rewards/ .txt logs to throughput plots
+
 Outputs graphs to outs/
 
 Supporting File
+
 rl_utils.py
+
 Essential DRDL helper functions (no modification required)
 
 Dependencies
 Package	Version
+
 Python	3.x
+
 PyTorch	1.12.1
+
 torchvision	0.13.1
+
 numpy	1.23.3
+
 tqdm	4.61.1
+
 matplotlib	3.6.0
-
-Usage Workflow
-1. Training (Optional)
-bash
-python src/MADDPG_SingleLink.py
-Outputs:
-
-Trained model (model/*.pt)
-
-Reward logs (rewards/*.txt)
-
-2. Evaluation
-bash
-python src/evaluate.py
-Expected result:
-Throughput approaching saturation in 3-link configuration
-Throughput Example
-
-3. Visualization
-bash
-python src/plot_reward.py
-Generates throughput curves from reward logs
-
-Performance Notes
-Ideal evaluation output shows near-saturation total throughput
-
-If pretrained models underperform:
-
-Retrain with MADDPG_SingleLink.py
-
-Save renamed model to model/
-
-Verify format compatibility for evaluation
-
-Run evaluate.py to validate improvements
