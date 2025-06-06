@@ -27,17 +27,16 @@ Repository Structure
 
 │
 
-├── src/                # Source code
 
-│   ├── rl_utils.py        # Reinforcement learning utilities
+├── rl_utils.py        # Reinforcement learning utilities
 
-│   ├── env_singlelink.py  # Wireless channel simulation environment
+├── env_singlelink.py  # Wireless channel simulation environment
 
-│   ├── MADDPG_SingleLink.py  # Training script (single-link)
+├── MADDPG_SingleLink.py  # Training script (single-link)
 
-│   ├── evaluate.py        # Model evaluation script
+├── evaluate.py        # Model evaluation script
 
-│   └── plot_reward.py     # Throughput visualization script
+└── plot_reward.py     # Throughput visualization script
 
 │
 
